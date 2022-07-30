@@ -10,25 +10,27 @@ import Foundation
 
 struct RemoteMapper {
     
-    static func emojij(_ item: EmojiRemote) -> Emoji? {
-        guard let key = item.keys.first, let value = item.values.first else { return nil }
-        return Emoji.init(id: key, icon: value)
+    static func emojis(_ item: EmojiRemotes) -> [Emoji] {
+        
+        let list : [Emoji] = item.keys.compactMap({ key in
+            let value = item[key]!
+            return Emoji.init(id: key, icon: value)
+        })
+        
+        return list
     }
     
-    static func emojij(_ item: EmojiRemote) -> EmojiEntity? {
-        guard let key = item.keys.first, let value = item.values.first else { return nil }
-        let entity = EmojiEntity.init()
-        entity.id = key
-        entity.icon = value
-        return entity
-    }
-    
-    static func emojis(_ items: EmojiRemotes) -> [Emoji] {
-        return items.compactMap(emojij(_:))
-    }
-    
-    static func emojis(_ items: EmojiRemotes) -> [EmojiEntity] {
-        return items.compactMap(emojij(_:))
+    static func emojis(_ item: EmojiRemotes) -> [EmojiEntity] {
+        
+        let list : [EmojiEntity] = item.keys.compactMap({ key in
+            let value = item[key]!
+            let entity = EmojiEntity.init()
+            entity.id = key
+            entity.icon = value
+            return entity
+        })
+        
+        return list
     }
     
     

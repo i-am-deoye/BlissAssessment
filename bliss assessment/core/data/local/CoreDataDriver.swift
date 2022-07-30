@@ -10,9 +10,9 @@ import CoreData
 
 final class CoreDataDriver: IDataBaseDriver {
 
-    private static let instance = CoreDataDriver()
-    private var context: NSManagedObjectContext!
-    private var psc : NSPersistentStoreCoordinator?
+    static let shared = CoreDataDriver()
+    var context: NSManagedObjectContext!
+    var psc : NSPersistentStoreCoordinator?
     
     
     private init() {

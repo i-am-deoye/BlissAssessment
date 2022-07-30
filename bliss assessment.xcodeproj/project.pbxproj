@@ -56,6 +56,7 @@
 		A6093DAC2894B25100674584 /* RepoRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093DAB2894B25100674584 /* RepoRemote.swift */; };
 		A6093DAF2894B44900674584 /* RepoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093DAD2894B44900674584 /* RepoEntity+CoreDataClass.swift */; };
 		A6093DB02894B44900674584 /* RepoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093DAE2894B44900674584 /* RepoEntity+CoreDataProperties.swift */; };
+		A6093DB22894B9AB00674584 /* DeleteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093DB12894B9AB00674584 /* DeleteUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		A6093DAB2894B25100674584 /* RepoRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRemote.swift; sourceTree = "<group>"; };
 		A6093DAD2894B44900674584 /* RepoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A6093DAE2894B44900674584 /* RepoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A6093DB12894B9AB00674584 /* DeleteUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 			children = (
 				A6093D5C28942FF000674584 /* SearchUser.swift */,
 				A6093D7C289481BD00674584 /* ListUsers.swift */,
+				A6093DB12894B9AB00674584 /* DeleteUser.swift */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				A6093D132893D49F00674584 /* AppDelegate.swift in Sources */,
 				A6093D702894579900674584 /* ILocalRepository.swift in Sources */,
 				A6093D5428942B5E00674584 /* Repo.swift in Sources */,
+				A6093DB22894B9AB00674584 /* DeleteUser.swift in Sources */,
 				A6093D64289435A800674584 /* EmojisRepository.swift in Sources */,
 				A6093D9A28949AA100674584 /* UserRemote.swift in Sources */,
 				A6093D7D289481BD00674584 /* ListUsers.swift in Sources */,

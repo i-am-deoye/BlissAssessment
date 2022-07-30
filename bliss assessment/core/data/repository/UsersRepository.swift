@@ -15,6 +15,7 @@ protocol UsersRepository: IRemoteRepository, ILocalRepository {
     func search(_ query: SearchQuery, result completion: @escaping UsersResultCompletion)
     func search(_ query: SearchQuery) -> [User]
     func search(_ query: SearchQuery) -> User?
+    func delete(_ user: User) throws
 }
 
 
@@ -57,6 +58,19 @@ final class DefaultUsersRepository: UsersRepository {
 
         let user = EntityMapper.user(entity)
         return user
+    }
+    
+    func delete(_ user: User) throws {
+        let query = Query().equal(key: "username", value: user.username)
+        let entity = local.fetch(UserEntity.self, query: query).item
+        if let entity = entity {
+            let result = local.delete(entity)
+            if !result.isDeleted, let message = result.error {
+                fatalError(message)
+            }
+        } else {
+            fatalError("no data found")
+        }
     }
 }
 

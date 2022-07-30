@@ -9,4 +9,5 @@ import Foundation
 import CoreData
 
 public class BaseEntity : NSManagedObject {
+    
 }

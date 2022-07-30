@@ -8,5 +8,4 @@
 import Foundation
 
 
-typealias EmojiRemote = Dictionary<String, String>
-typealias EmojiRemotes = [EmojiRemote]
+typealias EmojiRemotes = Dictionary<String, String>
