@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Run tests
-      run: swift test -v
+    - name: Bundle Install
+      run: bundle install
+    - name: Unit tests
+      run: bundle exec fastlane tests
