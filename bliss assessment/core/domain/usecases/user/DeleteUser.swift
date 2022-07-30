@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol DeleteUserUseCase {
+public protocol DeleteUserUseCase {
     func execute(_ user: User) throws
 }
 

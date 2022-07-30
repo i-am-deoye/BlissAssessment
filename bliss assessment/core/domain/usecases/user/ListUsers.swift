@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol ListUsersUseCase {
+public protocol ListUsersUseCase {
     func execute(_ query: SearchQuery) -> [User]
 }
 

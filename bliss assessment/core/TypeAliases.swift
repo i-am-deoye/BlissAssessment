@@ -8,4 +8,4 @@
 import Foundation
 
 
-typealias SearchQuery = String
+public typealias SearchQuery = String

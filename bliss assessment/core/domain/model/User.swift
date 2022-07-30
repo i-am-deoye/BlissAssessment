@@ -8,8 +8,14 @@
 import Foundation
 
 
-struct User {
-    let id: String
-    let username: String
-    let avatarUrl: String
+public struct User {
+    public let id: String
+    public let username: String
+    public let avatarUrl: String
+    
+    public init(id: String, username: String, avatarUrl: String) {
+        self.id = id
+        self.username = username
+        self.avatarUrl = avatarUrl
+    }
 }

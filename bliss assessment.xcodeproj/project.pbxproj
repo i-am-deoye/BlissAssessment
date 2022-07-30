@@ -13,7 +13,6 @@
 		A6093D1A2893D49F00674584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6093D182893D49F00674584 /* Main.storyboard */; };
 		A6093D1C2893D49F00674584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6093D1B2893D49F00674584 /* Assets.xcassets */; };
 		A6093D1F2893D49F00674584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6093D1D2893D49F00674584 /* LaunchScreen.storyboard */; };
-		A6093D2A2893D49F00674584 /* bliss_assessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093D292893D49F00674584 /* bliss_assessmentTests.swift */; };
 		A6093D342893D4A000674584 /* bliss_assessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093D332893D4A000674584 /* bliss_assessmentUITests.swift */; };
 		A6093D362893D4A000674584 /* bliss_assessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093D352893D4A000674584 /* bliss_assessmentUITestsLaunchTests.swift */; };
 		A6093D452893D77400674584 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093D442893D77400674584 /* HTTPClient.swift */; };
@@ -57,6 +56,10 @@
 		A6093DAF2894B44900674584 /* RepoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093DAD2894B44900674584 /* RepoEntity+CoreDataClass.swift */; };
 		A6093DB02894B44900674584 /* RepoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093DAE2894B44900674584 /* RepoEntity+CoreDataProperties.swift */; };
 		A6093DB22894B9AB00674584 /* DeleteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6093DB12894B9AB00674584 /* DeleteUser.swift */; };
+		A6411C6928952F3F00C4715C /* XCTestCase+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C6828952F3F00C4715C /* XCTestCase+Helpers.swift */; };
+		A6411C6C28952FE200C4715C /* ListUsersUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C6B28952FE200C4715C /* ListUsersUseCaseSpy.swift */; };
+		A6411C6E2895326400C4715C /* DeleteUserUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C6D2895326400C4715C /* DeleteUserUseCaseSpy.swift */; };
+		A6411C712895343500C4715C /* UserListViewModelUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C702895343500C4715C /* UserListViewModelUsecaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +89,6 @@
 		A6093D1E2893D49F00674584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6093D202893D49F00674584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6093D252893D49F00674584 /* bliss assessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bliss assessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6093D292893D49F00674584 /* bliss_assessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bliss_assessmentTests.swift; sourceTree = "<group>"; };
 		A6093D2F2893D4A000674584 /* bliss assessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bliss assessmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6093D332893D4A000674584 /* bliss_assessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bliss_assessmentUITests.swift; sourceTree = "<group>"; };
 		A6093D352893D4A000674584 /* bliss_assessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bliss_assessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -129,6 +131,10 @@
 		A6093DAD2894B44900674584 /* RepoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A6093DAE2894B44900674584 /* RepoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A6093DB12894B9AB00674584 /* DeleteUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUser.swift; sourceTree = "<group>"; };
+		A6411C6828952F3F00C4715C /* XCTestCase+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Helpers.swift"; sourceTree = "<group>"; };
+		A6411C6B28952FE200C4715C /* ListUsersUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersUseCaseSpy.swift; sourceTree = "<group>"; };
+		A6411C6D2895326400C4715C /* DeleteUserUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserUseCaseSpy.swift; sourceTree = "<group>"; };
+		A6411C702895343500C4715C /* UserListViewModelUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelUsecaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +204,8 @@
 		A6093D282893D49F00674584 /* bliss assessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6093D292893D49F00674584 /* bliss_assessmentTests.swift */,
+				A6411C6F289533DF00C4715C /* Features */,
+				A6411C6828952F3F00C4715C /* XCTestCase+Helpers.swift */,
 			);
 			path = "bliss assessmentTests";
 			sourceTree = "<group>";
@@ -392,6 +399,24 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		A6411C6A28952FB500C4715C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A6411C6B28952FE200C4715C /* ListUsersUseCaseSpy.swift */,
+				A6411C6D2895326400C4715C /* DeleteUserUseCaseSpy.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A6411C6F289533DF00C4715C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A6411C6A28952FB500C4715C /* Helpers */,
+				A6411C702895343500C4715C /* UserListViewModelUsecaseTests.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -580,7 +605,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6093D2A2893D49F00674584 /* bliss_assessmentTests.swift in Sources */,
+				A6411C6E2895326400C4715C /* DeleteUserUseCaseSpy.swift in Sources */,
+				A6411C712895343500C4715C /* UserListViewModelUsecaseTests.swift in Sources */,
+				A6411C6C28952FE200C4715C /* ListUsersUseCaseSpy.swift in Sources */,
+				A6411C6928952F3F00C4715C /* XCTestCase+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,25 +7,25 @@
 
 import Foundation
 
-protocol IUserListViewModel {
+public protocol IUserListViewModel {
     func fetchUsers(search query: SearchQuery) -> [User]
     func delete(user: User, error: (String) -> Void)
 }
 
-final class UserListViewModel: IUserListViewModel {
+public final class UserListViewModel: IUserListViewModel {
     private let listUsersUsecase: ListUsersUseCase
     private let deleteUserUsercase: DeleteUserUseCase
     
-    init(listUsersUsecase: ListUsersUseCase, deleteUserUsercase: DeleteUserUseCase) {
+    public init(listUsersUsecase: ListUsersUseCase, deleteUserUsercase: DeleteUserUseCase) {
         self.listUsersUsecase = listUsersUsecase
         self.deleteUserUsercase = deleteUserUsercase
     }
     
-    func fetchUsers(search query: SearchQuery) -> [User] {
+    public func fetchUsers(search query: SearchQuery) -> [User] {
         return listUsersUsecase.execute(query)
     }
     
-    func delete(user: User, error handler: (String) -> Void) {
+    public func delete(user: User, error handler: (String) -> Void) {
         do {
             try deleteUserUsercase.execute(user)
         } catch {
