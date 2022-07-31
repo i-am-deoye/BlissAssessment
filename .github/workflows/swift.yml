@@ -1,0 +1,31 @@
+name: Build and Testing
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    name: Testing App
+    runs-on: macOS-latest
+    env:
+      XCODE_VERSION: 13.2.1
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Select Xcode
+        run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+
+      - name: Install Pods
+        run: pod install
+
+      - name: Clean and Test App
+        run: exec ./.github/scripts/test_app.sh
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action/composite@v1
+        if: always()
+        with:
+          files: "test-results.xml"
