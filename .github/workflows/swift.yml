@@ -22,7 +22,7 @@ jobs:
         run: pod install
 
       - name: Clean and Test App
-        run: exec ./.github/scripts/test_app.sh
+        run: exec ./.github/test_app.sh
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v1
