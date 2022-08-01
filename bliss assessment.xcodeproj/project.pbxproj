@@ -81,11 +81,6 @@
 		A6411C9D2895DFBB00C4715C /* AppleReposPage+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C9C2895DFBB00C4715C /* AppleReposPage+Fetch.swift */; };
 		A6411C9F2895E35C00C4715C /* AppleReposPage+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C9E2895E35C00C4715C /* AppleReposPage+TableView.swift */; };
 		A6411CA22896075700C4715C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA12896075700C4715C /* IQKeyboardManagerSwift */; };
-		A6411CA52896B24E00C4715C /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA42896B24E00C4715C /* RxBlocking */; };
-		A6411CA72896B24E00C4715C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA62896B24E00C4715C /* RxCocoa */; };
-		A6411CA92896B24E00C4715C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA82896B24E00C4715C /* RxRelay */; };
-		A6411CAB2896B24E00C4715C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CAA2896B24E00C4715C /* RxSwift */; };
-		A6411CAD2896B24E00C4715C /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CAC2896B24E00C4715C /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,15 +182,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6411CA72896B24E00C4715C /* RxCocoa in Frameworks */,
-				A6411CAD2896B24E00C4715C /* RxTest in Frameworks */,
 				A6411C7E2895B9F300C4715C /* SDWebImage in Frameworks */,
-				A6411CA92896B24E00C4715C /* RxRelay in Frameworks */,
 				A6411CA22896075700C4715C /* IQKeyboardManagerSwift in Frameworks */,
 				A6093D902894929400674584 /* Alamofire in Frameworks */,
 				A6093D952894955600674584 /* Swinject in Frameworks */,
-				A6411CAB2896B24E00C4715C /* RxSwift in Frameworks */,
-				A6411CA52896B24E00C4715C /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,11 +539,6 @@
 				A6093D942894955600674584 /* Swinject */,
 				A6411C7D2895B9F300C4715C /* SDWebImage */,
 				A6411CA12896075700C4715C /* IQKeyboardManagerSwift */,
-				A6411CA42896B24E00C4715C /* RxBlocking */,
-				A6411CA62896B24E00C4715C /* RxCocoa */,
-				A6411CA82896B24E00C4715C /* RxRelay */,
-				A6411CAA2896B24E00C4715C /* RxSwift */,
-				A6411CAC2896B24E00C4715C /* RxTest */,
 			);
 			productName = "bliss assessment";
 			productReference = A6093D0F2893D49F00674584 /* bliss assessment.app */;
@@ -632,7 +617,6 @@
 				A6093D932894955600674584 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A6411C7C2895B9F300C4715C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				A6411CA02896075700C4715C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = A6093D102893D49F00674584 /* Products */;
 			projectDirPath = "";
@@ -1118,14 +1102,6 @@
 				version = 6.5.0;
 			};
 		};
-		A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = exactVersion;
-				version = 6.5.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1148,31 +1124,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A6411CA02896075700C4715C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
-		};
-		A6411CA42896B24E00C4715C /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		A6411CA62896B24E00C4715C /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		A6411CA82896B24E00C4715C /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		A6411CAA2896B24E00C4715C /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		A6411CAC2896B24E00C4715C /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 
