@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol IEmojiListViewModel {
     var emojis: [Emoji] { get set }
