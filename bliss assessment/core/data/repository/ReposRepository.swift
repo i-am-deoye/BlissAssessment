@@ -11,7 +11,7 @@ import Foundation
 protocol ReposRepository: IRemoteRepository, ILocalRepository {
     typealias ReposResultCompletion = (Result<[Repo], ResponseError>) -> Void
     
-    func search(_ query: SearchQuery, result completion: @escaping ReposResultCompletion)
+    func search(_ query: SearchQuery, page: Int, result completion: @escaping ReposResultCompletion)
     func search(_ query: SearchQuery) -> [Repo]
 }
 
@@ -28,13 +28,12 @@ final class DefaultReposRepository: ReposRepository {
     }
     
     
-    func search(_ query: SearchQuery, result completion: @escaping ReposResultCompletion) {
+    func search(_ query: SearchQuery, page: Int, result completion: @escaping ReposResultCompletion) {
         self.searchHandler = completion
         
-        guard let url = EndPoints.repos.url.absoluteString
+        guard let url = EndPoints.repos.absoluteString
             .param(key: "{username}", with: query)
-            .param(key: "{page}", with: "\(10)")
-            .param(key: "{size}", with: "\(10)")
+            .param(key: "{page}", with: "\(page)")
             .url else {
                 completion(.failure(.otherCause))
                 return
@@ -47,7 +46,7 @@ final class DefaultReposRepository: ReposRepository {
     }
     
     func search(_ query: SearchQuery) -> [Repo] {
-        let query = Query().equal(key: "username", value: query)
+        let query = Query().equal(key: "fullname", value: query)
         let entities = local.fetch(RepoEntity.self, query: query).items
         let repos = EntityMapper.repos(entities)
         return repos

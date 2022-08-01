@@ -60,6 +60,32 @@
 		A6411C6C28952FE200C4715C /* ListUsersUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C6B28952FE200C4715C /* ListUsersUseCaseSpy.swift */; };
 		A6411C6E2895326400C4715C /* DeleteUserUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C6D2895326400C4715C /* DeleteUserUseCaseSpy.swift */; };
 		A6411C712895343500C4715C /* UserListViewModelUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C702895343500C4715C /* UserListViewModelUsecaseTests.swift */; };
+		A6411C752895AFC000C4715C /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C742895AFC000C4715C /* MainPage.swift */; };
+		A6411C772895B57700C4715C /* MainPage+FetchEmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C762895B57700C4715C /* MainPage+FetchEmojis.swift */; };
+		A6411C792895B62100C4715C /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C782895B62100C4715C /* ViewController+Ext.swift */; };
+		A6411C7B2895B76600C4715C /* MainPage+RandomEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C7A2895B76600C4715C /* MainPage+RandomEmoji.swift */; };
+		A6411C7E2895B9F300C4715C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A6411C7D2895B9F300C4715C /* SDWebImage */; };
+		A6411C802895BA0700C4715C /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C7F2895BA0700C4715C /* ImageView+Ext.swift */; };
+		A6411C822895BB2900C4715C /* MainPage+SearchAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C812895BB2900C4715C /* MainPage+SearchAvatar.swift */; };
+		A6411C842895BE4200C4715C /* MainPage+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C832895BE4200C4715C /* MainPage+Present.swift */; };
+		A6411C862895BFF200C4715C /* AppDelegateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C852895BFF200C4715C /* AppDelegateUtils.swift */; };
+		A6411C892895C16700C4715C /* EmojiListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C882895C16700C4715C /* EmojiListPage.swift */; };
+		A6411C8B2895C38900C4715C /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C8A2895C38900C4715C /* EmojiCell.swift */; };
+		A6411C8D2895C4DC00C4715C /* EmojiListPage+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C8C2895C4DC00C4715C /* EmojiListPage+Collection.swift */; };
+		A6411C8F2895C79500C4715C /* UIViewController+Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C8E2895C79500C4715C /* UIViewController+Navigator.swift */; };
+		A6411C912895CE0700C4715C /* EmojiListPage+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C902895CE0700C4715C /* EmojiListPage+Refresh.swift */; };
+		A6411C942895CF7A00C4715C /* AvatarListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C932895CF7A00C4715C /* AvatarListPage.swift */; };
+		A6411C962895D07400C4715C /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C952895D07400C4715C /* AvatarCell.swift */; };
+		A6411C982895D1ED00C4715C /* AvatarListPage+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C972895D1ED00C4715C /* AvatarListPage+Collection.swift */; };
+		A6411C9B2895DED900C4715C /* AppleReposPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C9A2895DED900C4715C /* AppleReposPage.swift */; };
+		A6411C9D2895DFBB00C4715C /* AppleReposPage+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C9C2895DFBB00C4715C /* AppleReposPage+Fetch.swift */; };
+		A6411C9F2895E35C00C4715C /* AppleReposPage+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6411C9E2895E35C00C4715C /* AppleReposPage+TableView.swift */; };
+		A6411CA22896075700C4715C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA12896075700C4715C /* IQKeyboardManagerSwift */; };
+		A6411CA52896B24E00C4715C /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA42896B24E00C4715C /* RxBlocking */; };
+		A6411CA72896B24E00C4715C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA62896B24E00C4715C /* RxCocoa */; };
+		A6411CA92896B24E00C4715C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CA82896B24E00C4715C /* RxRelay */; };
+		A6411CAB2896B24E00C4715C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CAA2896B24E00C4715C /* RxSwift */; };
+		A6411CAD2896B24E00C4715C /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A6411CAC2896B24E00C4715C /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +161,25 @@
 		A6411C6B28952FE200C4715C /* ListUsersUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersUseCaseSpy.swift; sourceTree = "<group>"; };
 		A6411C6D2895326400C4715C /* DeleteUserUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserUseCaseSpy.swift; sourceTree = "<group>"; };
 		A6411C702895343500C4715C /* UserListViewModelUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelUsecaseTests.swift; sourceTree = "<group>"; };
+		A6411C742895AFC000C4715C /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		A6411C762895B57700C4715C /* MainPage+FetchEmojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPage+FetchEmojis.swift"; sourceTree = "<group>"; };
+		A6411C782895B62100C4715C /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
+		A6411C7A2895B76600C4715C /* MainPage+RandomEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPage+RandomEmoji.swift"; sourceTree = "<group>"; };
+		A6411C7F2895BA0700C4715C /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
+		A6411C812895BB2900C4715C /* MainPage+SearchAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPage+SearchAvatar.swift"; sourceTree = "<group>"; };
+		A6411C832895BE4200C4715C /* MainPage+Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPage+Present.swift"; sourceTree = "<group>"; };
+		A6411C852895BFF200C4715C /* AppDelegateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateUtils.swift; sourceTree = "<group>"; };
+		A6411C882895C16700C4715C /* EmojiListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiListPage.swift; sourceTree = "<group>"; };
+		A6411C8A2895C38900C4715C /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		A6411C8C2895C4DC00C4715C /* EmojiListPage+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiListPage+Collection.swift"; sourceTree = "<group>"; };
+		A6411C8E2895C79500C4715C /* UIViewController+Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigator.swift"; sourceTree = "<group>"; };
+		A6411C902895CE0700C4715C /* EmojiListPage+Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiListPage+Refresh.swift"; sourceTree = "<group>"; };
+		A6411C932895CF7A00C4715C /* AvatarListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarListPage.swift; sourceTree = "<group>"; };
+		A6411C952895D07400C4715C /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		A6411C972895D1ED00C4715C /* AvatarListPage+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvatarListPage+Collection.swift"; sourceTree = "<group>"; };
+		A6411C9A2895DED900C4715C /* AppleReposPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleReposPage.swift; sourceTree = "<group>"; };
+		A6411C9C2895DFBB00C4715C /* AppleReposPage+Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppleReposPage+Fetch.swift"; sourceTree = "<group>"; };
+		A6411C9E2895E35C00C4715C /* AppleReposPage+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppleReposPage+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +187,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6411CA72896B24E00C4715C /* RxCocoa in Frameworks */,
+				A6411CAD2896B24E00C4715C /* RxTest in Frameworks */,
+				A6411C7E2895B9F300C4715C /* SDWebImage in Frameworks */,
+				A6411CA92896B24E00C4715C /* RxRelay in Frameworks */,
+				A6411CA22896075700C4715C /* IQKeyboardManagerSwift in Frameworks */,
 				A6093D902894929400674584 /* Alamofire in Frameworks */,
 				A6093D952894955600674584 /* Swinject in Frameworks */,
+				A6411CAB2896B24E00C4715C /* RxSwift in Frameworks */,
+				A6411CA52896B24E00C4715C /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,10 +240,12 @@
 		A6093D112893D49F00674584 /* bliss assessment */ = {
 			isa = PBXGroup;
 			children = (
+				A6411C722895436C00C4715C /* ui */,
 				A6093D71289477A000674584 /* features */,
 				A6093D422893D73000674584 /* core */,
 				A6093D122893D49F00674584 /* AppDelegate.swift */,
 				A6093D142893D49F00674584 /* SceneDelegate.swift */,
+				A6411C852895BFF200C4715C /* AppDelegateUtils.swift */,
 				A6093D162893D49F00674584 /* ViewController.swift */,
 				A6093D182893D49F00674584 /* Main.storyboard */,
 				A6093D1B2893D49F00674584 /* Assets.xcassets */,
@@ -417,6 +471,63 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		A6411C722895436C00C4715C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				A6411C992895DEC000C4715C /* applerepos */,
+				A6411C922895CF5300C4715C /* userlist */,
+				A6411C872895C15200C4715C /* emojilist */,
+				A6411C732895AFAD00C4715C /* main */,
+				A6411C782895B62100C4715C /* ViewController+Ext.swift */,
+				A6411C8E2895C79500C4715C /* UIViewController+Navigator.swift */,
+				A6411C7F2895BA0700C4715C /* ImageView+Ext.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		A6411C732895AFAD00C4715C /* main */ = {
+			isa = PBXGroup;
+			children = (
+				A6411C742895AFC000C4715C /* MainPage.swift */,
+				A6411C762895B57700C4715C /* MainPage+FetchEmojis.swift */,
+				A6411C7A2895B76600C4715C /* MainPage+RandomEmoji.swift */,
+				A6411C812895BB2900C4715C /* MainPage+SearchAvatar.swift */,
+				A6411C832895BE4200C4715C /* MainPage+Present.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		A6411C872895C15200C4715C /* emojilist */ = {
+			isa = PBXGroup;
+			children = (
+				A6411C882895C16700C4715C /* EmojiListPage.swift */,
+				A6411C902895CE0700C4715C /* EmojiListPage+Refresh.swift */,
+				A6411C8C2895C4DC00C4715C /* EmojiListPage+Collection.swift */,
+				A6411C8A2895C38900C4715C /* EmojiCell.swift */,
+			);
+			path = emojilist;
+			sourceTree = "<group>";
+		};
+		A6411C922895CF5300C4715C /* userlist */ = {
+			isa = PBXGroup;
+			children = (
+				A6411C932895CF7A00C4715C /* AvatarListPage.swift */,
+				A6411C972895D1ED00C4715C /* AvatarListPage+Collection.swift */,
+				A6411C952895D07400C4715C /* AvatarCell.swift */,
+			);
+			path = userlist;
+			sourceTree = "<group>";
+		};
+		A6411C992895DEC000C4715C /* applerepos */ = {
+			isa = PBXGroup;
+			children = (
+				A6411C9A2895DED900C4715C /* AppleReposPage.swift */,
+				A6411C9C2895DFBB00C4715C /* AppleReposPage+Fetch.swift */,
+				A6411C9E2895E35C00C4715C /* AppleReposPage+TableView.swift */,
+			);
+			path = applerepos;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,6 +547,13 @@
 			packageProductDependencies = (
 				A6093D8F2894929400674584 /* Alamofire */,
 				A6093D942894955600674584 /* Swinject */,
+				A6411C7D2895B9F300C4715C /* SDWebImage */,
+				A6411CA12896075700C4715C /* IQKeyboardManagerSwift */,
+				A6411CA42896B24E00C4715C /* RxBlocking */,
+				A6411CA62896B24E00C4715C /* RxCocoa */,
+				A6411CA82896B24E00C4715C /* RxRelay */,
+				A6411CAA2896B24E00C4715C /* RxSwift */,
+				A6411CAC2896B24E00C4715C /* RxTest */,
 			);
 			productName = "bliss assessment";
 			productReference = A6093D0F2893D49F00674584 /* bliss assessment.app */;
@@ -512,6 +630,9 @@
 			packageReferences = (
 				A6093D8E2894929400674584 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A6093D932894955600674584 /* XCRemoteSwiftPackageReference "Swinject" */,
+				A6411C7C2895B9F300C4715C /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				A6411CA02896075700C4715C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = A6093D102893D49F00674584 /* Products */;
 			projectDirPath = "";
@@ -561,12 +682,18 @@
 				A6093D9C28949B6600674584 /* RemoteMapper.swift in Sources */,
 				A6093D5D28942FF000674584 /* SearchUser.swift in Sources */,
 				A6093D172893D49F00674584 /* ViewController.swift in Sources */,
+				A6411C9F2895E35C00C4715C /* AppleReposPage+TableView.swift in Sources */,
+				A6411C802895BA0700C4715C /* ImageView+Ext.swift in Sources */,
 				A6093D482893D83700674584 /* EndPoints.swift in Sources */,
 				A6093D132893D49F00674584 /* AppDelegate.swift in Sources */,
+				A6411C892895C16700C4715C /* EmojiListPage.swift in Sources */,
+				A6411C752895AFC000C4715C /* MainPage.swift in Sources */,
 				A6093D702894579900674584 /* ILocalRepository.swift in Sources */,
 				A6093D5428942B5E00674584 /* Repo.swift in Sources */,
+				A6411C912895CE0700C4715C /* EmojiListPage+Refresh.swift in Sources */,
 				A6093DB22894B9AB00674584 /* DeleteUser.swift in Sources */,
 				A6093D64289435A800674584 /* EmojisRepository.swift in Sources */,
+				A6411C942895CF7A00C4715C /* AvatarListPage.swift in Sources */,
 				A6093D9A28949AA100674584 /* UserRemote.swift in Sources */,
 				A6093D7D289481BD00674584 /* ListUsers.swift in Sources */,
 				A6093D802894825500674584 /* UserListViewModel.swift in Sources */,
@@ -578,6 +705,7 @@
 				A6093D5928942DE300674584 /* GetRandomEmoji.swift in Sources */,
 				A6093D892894855D00674584 /* BaseEntity.swift in Sources */,
 				A6093DA228949ED900674584 /* EmojiEntity+CoreDataClass.swift in Sources */,
+				A6411C7B2895B76600C4715C /* MainPage+RandomEmoji.swift in Sources */,
 				A6093D452893D77400674584 /* HTTPClient.swift in Sources */,
 				A6093D9828949A0300674584 /* EmojiRemote.swift in Sources */,
 				A6093DA62894A08D00674584 /* EnitityMapper.swift in Sources */,
@@ -585,19 +713,31 @@
 				A6093D5228942AAF00674584 /* User.swift in Sources */,
 				A6093DAC2894B25100674584 /* RepoRemote.swift in Sources */,
 				A6093D5F2894315B00674584 /* SearchRepos.swift in Sources */,
+				A6411C982895D1ED00C4715C /* AvatarListPage+Collection.swift in Sources */,
 				A6093D5028942A3A00674584 /* Emoji.swift in Sources */,
+				A6411C9B2895DED900C4715C /* AppleReposPage.swift in Sources */,
+				A6411C9D2895DFBB00C4715C /* AppleReposPage+Fetch.swift in Sources */,
 				A6093D7428947A6800674584 /* MainViewModel.swift in Sources */,
+				A6411C862895BFF200C4715C /* AppDelegateUtils.swift in Sources */,
+				A6411C842895BE4200C4715C /* MainPage+Present.swift in Sources */,
 				A6093D152893D49F00674584 /* SceneDelegate.swift in Sources */,
 				A6093D792894806700674584 /* EmojiListViewModel.swift in Sources */,
 				A6093D4D289428A600674584 /* FetchEmojis.swift in Sources */,
+				A6411C772895B57700C4715C /* MainPage+FetchEmojis.swift in Sources */,
 				A6093DAF2894B44900674584 /* RepoEntity+CoreDataClass.swift in Sources */,
 				A6093D9F28949D3100674584 /* Bliss.xcdatamodeld in Sources */,
+				A6411C822895BB2900C4715C /* MainPage+SearchAvatar.swift in Sources */,
 				A6093D6A2894515F00674584 /* ReposRepository.swift in Sources */,
 				A6093D852894833C00674584 /* RepoListViewModel.swift in Sources */,
+				A6411C8F2895C79500C4715C /* UIViewController+Navigator.swift in Sources */,
+				A6411C962895D07400C4715C /* AvatarCell.swift in Sources */,
 				A6093D6E289455C900674584 /* IDataBaseDriver.swift in Sources */,
 				A6093DA92894AADD00674584 /* UserEntity+CoreDataClass.swift in Sources */,
 				A6093D5B28942F0600674584 /* ListEmojis.swift in Sources */,
 				A6093D6C2894543800674584 /* IRemoteRepository.swift in Sources */,
+				A6411C8D2895C4DC00C4715C /* EmojiListPage+Collection.swift in Sources */,
+				A6411C8B2895C38900C4715C /* EmojiCell.swift in Sources */,
+				A6411C792895B62100C4715C /* ViewController+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +1102,30 @@
 				kind = branch;
 			};
 		};
+		A6411C7C2895B9F300C4715C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A6411CA02896075700C4715C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -974,6 +1138,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A6093D932894955600674584 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		A6411C7D2895B9F300C4715C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6411C7C2895B9F300C4715C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		A6411CA12896075700C4715C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6411CA02896075700C4715C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		A6411CA42896B24E00C4715C /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		A6411CA62896B24E00C4715C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A6411CA82896B24E00C4715C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		A6411CAA2896B24E00C4715C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		A6411CAC2896B24E00C4715C /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6411CA32896B24E00C4715C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 

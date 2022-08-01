@@ -9,7 +9,7 @@ import Foundation
 
 
 public protocol ListUsersUseCase {
-    func execute(_ query: SearchQuery) -> [User]
+    func execute() -> [User]
 }
 
 
@@ -20,7 +20,7 @@ final class DefaultListUsersUseCase: ListUsersUseCase {
         self.repository = repository
     }
     
-    func execute(_ query: SearchQuery) -> [User] {
-        return repository.search(query)
+    func execute() -> [User] {
+        return repository.fetchUsers()
     }
 }

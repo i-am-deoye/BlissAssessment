@@ -10,10 +10,11 @@ import bliss_assessment
 
 
 class ListUsersUseCaseSpy: ListUsersUseCase {
-    private var whenQueryIs = "demo"
     
-    func execute(_ query: SearchQuery) -> [User] {
-        if whenQueryIs == query { return [User.init(id: "1", username: "demo", avatarUrl: "<url>")] }
+    var whenQueryIsEmpty = true
+    
+    func execute() -> [User] {
+        if !whenQueryIsEmpty { return [User.init(id: "1", username: "demo", avatarUrl: "<url>")] }
         return []
     }
 }

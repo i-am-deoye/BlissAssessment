@@ -9,7 +9,7 @@ import Foundation
 
 
 struct UserRemote: Decodable, Equatable {
-    let id: String
+    let id: Int
     let username: String
     let avatarUrl: String
     
