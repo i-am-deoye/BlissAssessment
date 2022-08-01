@@ -1,31 +1,30 @@
-name: Build and Testing
-
+name: CI
+# This workflow is triggered on pushes to the repository.
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    branches:
+    - develop
+    - feature/*
 
 jobs:
   test:
-    name: Testing App
+    # Job name is Test
+    name: Test
+    # This job runs on macOS
     runs-on: macOS-latest
-    env:
-      XCODE_VERSION: 13.2.1
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 8']
+        xcode: ['/Applications/Xcode_11.1.app/Contents/Developer']
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Select Xcode
-        run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
-
-      - name: Install Pods
-        run: pod install
-
-      - name: Clean and Test App
-        run: exec ./.github/test_app.sh
-
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action/composite@v1
-        if: always()
-        with:
-          files: "test-results.xml"
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Bundle Install
+        run: bundle install
+      - name: Build and test
+        run: xcodebuild \
+              -workspace bliss assessment.xcworkspace \
+              -scheme "bliss assessment" \
+              -sdk iphonesimulator \
+              -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' \
+              test
