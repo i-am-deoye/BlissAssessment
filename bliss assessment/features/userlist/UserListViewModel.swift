@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol IUserListViewModel {
     var users: [User] { get set }
