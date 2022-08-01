@@ -14,21 +14,17 @@ class UserListViewModelUsecaseTests: XCTestCase {
     
     
     func test_fetchUsers_byQuery_whenNotEmpty() {
-        let (sut, _ , _) = Helper.makeMainSUT(testCase: self)
-        
-        let query = "demo"
-        
-        let users = sut.fetchUsers(search: query)
-        XCTAssertEqual(users.count, 1)
+        let (sut, listUser , _) = Helper.makeMainSUT(testCase: self)
+        listUser.whenQueryIsEmpty = false
+        sut.fetchUsers()
+        XCTAssertEqual(sut.usersCount, 1)
     }
     
     func test_fetchUsers_byQuery_whenNotFound() {
         let (sut, _ , _) = Helper.makeMainSUT(testCase: self)
         
-        let query = "demo-"
-        
-        let users = sut.fetchUsers(search: query)
-        XCTAssertEqual(users.count, 0)
+        sut.fetchUsers()
+        XCTAssertEqual(sut.usersCount, 0)
     }
     
     func test_deleteUser_whenSuccessful() {
@@ -38,8 +34,7 @@ class UserListViewModelUsecaseTests: XCTestCase {
         deleteUser.isErrorDeleting = false
         var expectedResult : String?
         
-        let user = User.init(id: "0", username: "demo", avatarUrl: "<url>")
-        sut.delete(user: user) { error in
+        sut.deleteUser(at: 0, reload: {}) { error in
             expectedResult = error
         }
         
@@ -49,19 +44,15 @@ class UserListViewModelUsecaseTests: XCTestCase {
     
     func test_deleteUser_deliverError() {
         let (sut, _ , deleteUser) = Helper.makeMainSUT(testCase: self)
-        
-        let expectation = expectation(description: "Delete user deliver error")
+        sut.users = [User.init(id: "0", username: "demo", avatarUrl: "url")]
         
         deleteUser.isErrorDeleting = true
         var expectedResult : String?
         
-        let user = User.init(id: "0", username: "demo", avatarUrl: "<url>")
-        sut.delete(user: user) { error in
+        sut.deleteUser(at: 0, reload: {}) { error in
             expectedResult = error
-            expectation.fulfill()
         }
         
-        wait(for: [expectation], timeout: 2)
         XCTAssertNotNil(expectedResult)
     }
     

@@ -34,8 +34,12 @@ struct RemoteMapper {
     }
     
     
-    static func user(_ item: UserRemote) -> User {
-        return User.init(id: item.id, username: item.username, avatarUrl: item.avatarUrl)
+    static func user(_ item: UserRemote) -> UserEntity {
+        let entity = UserEntity()
+        entity.id = String(item.id)
+        entity.username = item.username
+        entity.avatarUrl = item.avatarUrl
+        return entity
     }
     
     

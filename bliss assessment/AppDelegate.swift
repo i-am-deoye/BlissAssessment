@@ -7,6 +7,7 @@
 
 import UIKit
 import Swinject
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,12 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return app.container
     }
     
-    private var container : Swinject.Container!
+    var window: UIWindow?
+    var container : Swinject.Container!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
         setupDependencies()
+        AppDelegateUtils.routeToMain()
         return true
     }
 
@@ -45,6 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 fileprivate extension AppDelegate {
     func setupDependencies() {
         container = Container()
-
+        
+        MainPage.register(using: container)
+        EmojiListPage.register(using: container)
+        AvatarListPage.register(using: container)
+        AppleReposPage.register(using: container)
     }
 }

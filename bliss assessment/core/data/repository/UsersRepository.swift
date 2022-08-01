@@ -13,7 +13,7 @@ protocol UsersRepository: IRemoteRepository, ILocalRepository {
     typealias UsersResultCompletion = (Result<Void, ResponseError>) -> Void
     
     func search(_ query: SearchQuery, result completion: @escaping UsersResultCompletion)
-    func search(_ query: SearchQuery) -> [User]
+    func fetchUsers() -> [User]
     func search(_ query: SearchQuery) -> User?
     func delete(_ user: User) throws
 }
@@ -34,16 +34,15 @@ final class DefaultUsersRepository: UsersRepository {
     func search(_ query: SearchQuery, result completion: @escaping UsersResultCompletion) {
         self.searchHandler = completion
         
-        let url = EndPoints.users.url
+        guard let url = EndPoints.users.absoluteString.param(key: "{username}", with: query).url else { return }
         client.get(from: url, completion: {[weak self] result in
             guard let self = self else { return }
             self.onSearched(result)
         })
     }
     
-    func search(_ query: SearchQuery) -> [User] {
-        let query = Query().equal(key: "username", value: query)
-        let entities = local.fetch(UserEntity.self, query: query).items
+    func fetchUsers() -> [User] {
+        let entities = local.fetch(UserEntity.self).items
         let users = EntityMapper.users(entities)
         return users
     }
@@ -66,10 +65,10 @@ final class DefaultUsersRepository: UsersRepository {
         if let entity = entity {
             let result = local.delete(entity)
             if !result.isDeleted, let message = result.error {
-                fatalError(message)
+                throw NSError.init(domain: message, code: 999, userInfo: nil)
             }
         } else {
-            fatalError("no data found")
+            throw NSError.init(domain: "no data found", code: 999, userInfo: nil)
         }
     }
 }
