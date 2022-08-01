@@ -23,8 +23,8 @@ jobs:
         run: bundle install
       - name: Build and test
         run: xcodebuild \
-              -workspace bliss assessment.xcworkspace \
-              -scheme "bliss assessment" \
+              -workspace blissassessment.xcworkspace \
+              -scheme "blissassessment" \
               -sdk iphonesimulator \
               -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' \
               test
